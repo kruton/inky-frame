@@ -50,7 +50,7 @@ function ci_tools_clone {
     mkdir -p "$CI_BUILD_ROOT/tools"
     git clone https://github.com/gadgetoid/py_decl -b "$PY_DECL_VERSION" "$CI_BUILD_ROOT/tools/py_decl"
     git clone https://github.com/gadgetoid/dir2uf2 -b "$DIR2UF2_VERSION" "$CI_BUILD_ROOT/tools/dir2uf2"
-    python3 -m pip install littlefs-python==0.12.0
+    PIP_BREAK_SYSTEM_PACKAGES=1 python3 -m pip install littlefs-python==0.12.0
 }
 
 function ci_micropython_build_mpy_cross {
