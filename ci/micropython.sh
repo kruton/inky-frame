@@ -62,7 +62,7 @@ function ci_micropython_build_mpy_cross {
 }
 
 function ci_apt_install_build_deps {
-    sudo apt-get update && sudo apt-get install --no-install-recommends --yes ccache cmake
+    sudo apt-get update && sudo apt-get install --no-install-recommends --yes ccache cmake python3-dev
 }
 
 function ci_prepare_all {
